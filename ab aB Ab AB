@@ -1,0 +1,21 @@
+
+def solve(inp,out,index):
+    if index==len(inp):
+        print(out)
+        return 
+    
+    solve(inp,out+inp[index].lower(), index +1)
+    solve(inp,out+inp[index].upper(),index +1)
+
+
+
+def Main():
+    inp="ab"
+    out=""
+    index=0;
+    solve(inp,out,index)
+
+
+
+if __name__=="__main__":
+    Main()
