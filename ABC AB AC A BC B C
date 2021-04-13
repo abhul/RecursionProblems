@@ -1,0 +1,23 @@
+
+
+
+def solve(inp, output, index):
+    if index==len(inp):
+        print(output)
+        return
+    solve(inp,output+inp[index],index+1)
+    solve(inp, output, index +1)
+    
+    
+
+
+
+def Main():
+    inp="ABC"
+    output=""
+    index=0
+    solve(inp,output,index)
+
+
+if __name__=="__main__":
+    Main()
